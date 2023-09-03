@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runner.CucumberRunner" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-08-09T08:37:07" hostname="LN00206-LT" time="0.132">
+  <properties/>
+  <testcase name="runScenario[0](&quot;Login with email and password&quot;, &quot;Login&quot;)" classname="runner.CucumberRunner" time="0.132">
+    <failure message="java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)&quot; because &quot;webdriver.WebdriverInstance.webDriver&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)&quot; because &quot;webdriver.WebdriverInstance.webDriver&quot; is null
+	at pages.LoginPage.isOnLandingPage(LoginPage.java:20)
+	at steps_definition.LoginSteps.userIsOnLandingPage(LoginSteps.java:16)
+	at ✽.User is on Gramedia Landing Page(file:///C:/Users/Puro%20Aji%20Fahmi/Documents/Test/TestGramedia/src/test/resources/features/Login.feature:9)
+</failure>
+  </testcase>
+  <system-out><![CDATA[masuk
+masuk 2
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,74 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.13.0'
+
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-testng
+    implementation group: 'io.cucumber', name: 'cucumber-testng', version: '7.13.0'
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.11.0'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.4.1'
+
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation group: 'org.testng', name: 'testng', version: '7.8.0'
+
+}
+
+//test {
+//    useJUnitPlatform()
+//}
+
+test {
+    useTestNG()
+    scanForTestClasses = false
+    testLogging.showStandardStreams = true
+}
+
+
+//tasks.withType(Test) {
+//    // Use TestNG for unit tests.
+//    useTestNG() {
+//        /*
+//        * Preserving order of TestNG tests
+//        */
+//        preserveOrder true
+//
+//        /*
+//        * Grouping TestNG tests by instances
+//        */
+//        groupByInstances = true
+//
+//        /*
+//        * To generate reports by TestNG library
+//        */
+//        useDefaultListeners = false
+//
+//        /*
+//        * Set TestNG output dir
+//        */
+//        outputDirectory = file('build/testngOutput')
+//
+//        //includeGroups 'unitTests'
+//        //excludeGroups 'integrationTests'
+//    }
+//}
+
+//tasks.withType(Test) {
+//    scanForTestClasses = false
+//    include "**/*Test.class" // whatever Ant pattern matches your test class files
+//}
